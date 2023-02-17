@@ -1,0 +1,112 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<body>-->
+
+<!--{% for i in comp %}-->
+<!--    {{ i }}-->
+<!--    <br>-->
+<!--{% endfor %}-->
+
+<!--<br>-->
+
+<!--{% for i in buttons %}-->
+<!--    {% if quer == "" %}-->
+<!--        <a href="./?text={{i}}">-->
+<!--            <button>-->
+<!--                {{ i }}-->
+<!--            </button>-->
+<!--        </a>-->
+<!--    {% else %}-->
+<!--        <a href="./?text={{quer}},{{i}}">-->
+<!--            <button>-->
+<!--                {{ i }}-->
+<!--            </button>-->
+<!--        </a>-->
+<!--    {% endif %}-->
+<!--{% endfor %}-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chatbot UI Example</title>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <style>
+    /* CSS code for chat icon and chatbot UI goes here */
+
+    .chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.chat-icon i {
+  font-size: 24px;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.chatbot-ui {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  z-index: 9998;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+  </style>
+</head>
+<body>
+  <div class="chat-icon">
+    <i class="fa fa-comment"></i>
+  </div>
+
+  <div class="chatbot-ui">
+    <!-- Chatbot UI content goes here -->
+
+      {% for i in comp %}
+    {{ i }}
+    <br>
+{% endfor %}
+
+<br>
+
+{% for i in buttons %}
+    {% if quer == "" %}
+        <a href="./?text={{i}}">
+            <button>
+                {{ i }}
+            </button>
+        </a>
+    {% else %}
+        <a href="./?text={{quer}},{{i}}">
+            <button>
+                {{ i }}
+            </button>
+        </a>
+    {% endif %}
+{% endfor %}
+  </div>
+
+  <script>
+    /* JavaScript code for showing/hiding chatbot UI goes here */
+    document.querySelector('.chat-icon').addEventListener('click', function() {
+    document.querySelector('.chatbot-ui').style.display = 'block';
+  });
+  </script>
+</body>
+</html>

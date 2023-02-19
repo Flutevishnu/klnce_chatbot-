@@ -1,43 +1,9 @@
-<!--<!DOCTYPE html>-->
-<!--<html>-->
-<!--<body>-->
-
-<!--{% for i in comp %}-->
-<!--    {{ i }}-->
-<!--    <br>-->
-<!--{% endfor %}-->
-
-<!--<br>-->
-
-<!--{% for i in buttons %}-->
-<!--    {% if quer == "" %}-->
-<!--        <a href="./?text={{i}}">-->
-<!--            <button>-->
-<!--                {{ i }}-->
-<!--            </button>-->
-<!--        </a>-->
-<!--    {% else %}-->
-<!--        <a href="./?text={{quer}},{{i}}">-->
-<!--            <button>-->
-<!--                {{ i }}-->
-<!--            </button>-->
-<!--        </a>-->
-<!--    {% endif %}-->
-<!--{% endfor %}-->
-
-<!--</body>-->
-<!--</html>-->
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
   <title>Chatbot UI Example</title>
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <style>
-    /* CSS code for chat icon and chatbot UI goes here */
 
     .chat-icon {
   position: fixed;
@@ -51,6 +17,7 @@
   font-size: 24px;
   color: #fff;
   background-color: #007bff;
+  background-image: url(C:\Users\vishn\klnce-chat-app\api\images\chat_image.jpg);
   border-radius: 50%;
   padding: 10px;
 }
@@ -60,9 +27,10 @@
   position: fixed;
   bottom: 80px;
   right: 20px;
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 600px;
   z-index: 9998;
+  /* background-image: url(); */
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -72,15 +40,15 @@
 </head>
 <body>
   <div class="chat-icon">
-    <i class="fa fa-comment"></i>
+    <!-- <i class="fa fa-comment"></i> -->
+    <i class='fas fa-comment' style='font-size:36px'></i>
+
   </div>
 
   <div class="chatbot-ui">
-    <!-- Chatbot UI content goes here -->
 
       {% for i in comp %}
-    {{ i }}
-    <br>
+    {{ i }}<br>
 {% endfor %}
 
 <br>
@@ -104,9 +72,43 @@
 
   <script>
     /* JavaScript code for showing/hiding chatbot UI goes here */
-    document.querySelector('.chat-icon').addEventListener('click', function() {
-    document.querySelector('.chatbot-ui').style.display = 'block';
-  });
+  //   document.querySelector('.chat-icon').addEventListener('click', function() {
+  //   document.querySelector('.chatbot-ui').style.display = 'block';
+  
+  // });
+  document.querySelector('.chat-icon').addEventListener('click', function() {
+  var chatbotUI = document.querySelector('.chatbot-ui');
+  if (chatbotUI.style.display === 'block') {
+    chatbotUI.style.display = 'none';
+  } else {
+    chatbotUI.style.display = 'block';
+  }
+});
+// var chatIcon = document.querySelector('.chat-icon');
+// var chatbotUI = document.querySelector('.chatbot-ui');
+
+// chatIcon.addEventListener('click', function() {
+//   if(chatbotUI.style.display = 'block'){
+//     chatbotUI.style.display = 'none';
+//   } 
+//   else{
+//     chatbotUI.style.display = 'block';
+//   }
+// });
+
+function updateChatbotUI(comp, buttons) {
+  var chatbotContent = chatbotUI.innerHTML;
+  var separator = '<hr>'; // add a horizontal rule separator
+  chatbotUI.innerHTML = chatbotContent + separator + comp + buttons;
+}
+updateChatbotUI(comp, buttons);
+
+//   var chatbotContent = chatbotUI.innerHTML;
+//   chatbotUI.innerHTML = chatbotContent + comp + buttons;
+// }
+
+
+    
   </script>
 </body>
 </html>

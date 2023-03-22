@@ -1,0 +1,236 @@
+body {
+    font-family: consolas;
+}
+
+#buttons, #texts {
+    font-size: large;
+    padding-top: 2px;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* .chatmsg button {
+    font-family: consolas;
+    font-size: large;
+    background-color: white;
+    color: black;
+    border: 1px solid midnightblue;
+    border-radius:50px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+
+.chatmsg button:hover {
+    background-color: black;
+    color: white;
+    transition: .3s;
+} */
+
+.chat {
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    z-index: 1000;
+    border: 0px;
+    cursor: pointer;
+}
+
+.chat img {
+    width: 150px;
+    height: 150px;
+}
+
+#reload_img {
+    position: absolute; /* Position the image absolutely within the parent div */
+    top: 5px; /* Adjust the top and right values as needed to position the image where you want it */
+    right: 5px;
+    cursor: pointer; /* Add cursor pointer to indicate the image is clickable */
+    width: 40px;
+    height: 40px;
+}
+
+.design {
+    background-color: gray;
+    color: white;
+    padding: 15px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.design img {
+    width: 150px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: white;
+    margin-right: 5px;
+    border: 3px solid white;
+}
+.design-header img{
+    margin-left: 130px;
+    margin-top: -70px;
+    width: 95px;
+    height: 95px;
+    /* border-radius: 100%; */
+    overflow: hidden;
+    background-color: grey;
+
+}
+
+.design-header {
+    display: flex;
+    align-items: center;
+}
+
+.design-header p {
+    margin: 1;
+    align-content: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+#chat-ui {
+    width: 400px;
+    height: 600px;
+    bottom: 100px;
+    right: 10px;
+    position: fixed;
+    z-index: 1000;
+    border-radius: 30px;
+    border: 2px solid black; 
+    background-image: url("bg.jpg");
+    /* overflow-y: scroll;
+    scrollbar-width: thin ;
+    scrollbar-color: #ccc #fff;  */
+}
+.chatbox {
+    max-height: 440px;
+    overflow-y: scroll;
+    scrollbar-width: thin ;
+    scrollbar-color: #ccc #fff; 
+    position: fixed;
+    z-index: 800;
+    border-radius: 15px;
+    
+}
+
+.chatbox::-webkit-scrollbar {
+    display: none;
+}
+
+.input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.input input {
+    width: calc(100% - 70px);
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.input button {
+    width: 60px;
+    height: 40px;
+    background-color: grey;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#as {
+    background-color: #f2f2f2;
+    padding: 2px;
+    margin-left: 15px; 
+    margin-top: -1px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 260px;
+    margin-bottom: 30px;
+  }
+
+.content-as {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-left: 15px; 
+    margin-top: -1px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 260px;
+    margin-bottom: 30px;
+    /* border: 1px solid #ccc;  */ 
+}
+
+.content-as button {
+    font-family: consolas;
+    font-size: large;
+    background-color: white;
+    color: black;
+    border: 1px solid midnightblue;
+    border-radius:50px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.content-as button:hover {
+    background-color: black;
+    color: white;
+    transition: .3s;
+}
+
+#as button {
+    font-family: consolas;
+    font-size: large;
+    background-color: white;
+    color: black;
+    border: 1px solid midnightblue;
+    border-radius:50px;
+    margin: 3px;
+    cursor: pointer;
+}
+#as button:hover {
+    background-color: black;
+    color: white;
+    transition: .3s;
+}
+
+.content-INPUT {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-left: 15px; 
+    margin-top: -1px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 260px;
+    margin-bottom: 30px;
+}
+
+#head{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+  
+
+  
